@@ -12,8 +12,9 @@ app.get("/", (req, res) => {
   res.send("HOME");
 });
 app.use("/users", userRouter);
-app.use("/notes",noteRouter)
 app.use(authentication)
+app.use("/notes",noteRouter)
+
 app.use(cors())
 
 app.listen(8080, async () => {
